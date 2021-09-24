@@ -1,3 +1,5 @@
+// import './style.css';
+
 function h(tag, props, children) {
   return {
     tag,
@@ -24,6 +26,8 @@ function mount(root, vnode) {
   root.appendChild(el);
 }
 
-// function unmount() {}
+function unmount() {
+  
+}
 
 mount(document.getElementById('app'), h('h1', null, 'Hello World'));
