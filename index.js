@@ -1,4 +1,4 @@
-// import './style.css';
+import './style.css';
 
 function h(tag, props, children) {
   return {
@@ -18,7 +18,7 @@ function mount(root, vnode) {
   if (typeof vnode.children === 'string') {
     el.textContent = vnode.children;
   } else {
-    vnode.children.forEeach((child) => {
+    vnode.children.forEach((child) => {
       mount(el, child);
     });
   }
@@ -26,8 +26,18 @@ function mount(root, vnode) {
   root.appendChild(el);
 }
 
-function unmount() {
-  
+function unmount(vnode) {
+  vnode.el.parentNode.removeChild(vnode.el);
 }
 
-mount(document.getElementById('app'), h('h1', null, 'Hello World'));
+function Button(text) {
+  return h('button', {}, text);
+}
+
+// component
+function App() {
+  return Button('Click me');
+}
+
+// render
+mount(document.getElementById('app'), App());
