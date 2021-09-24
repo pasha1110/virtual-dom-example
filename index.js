@@ -30,13 +30,25 @@ function unmount(vnode) {
   vnode.el.parentNode.removeChild(vnode.el);
 }
 
-function Button(text) {
-  return h('button', {}, text);
+function Button(text, color = '#1abc9c') {
+  return h(
+    'button',
+    {
+      style: `
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background-color: ${color};
+      color: white
+      `,
+    },
+    text
+  );
 }
 
 // component
 function App() {
-  return Button('Click me');
+  return Button('Click me', 'red');
 }
 
 // render
