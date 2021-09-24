@@ -10,7 +10,7 @@ function Div(children) {
 
 // component
 function App() {
-  return Div();
+  return Button('Button');
 }
 
 export default App;
