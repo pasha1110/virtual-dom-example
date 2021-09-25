@@ -6,8 +6,5 @@ const route = new Router();
 route.get('/App', function () {
   mount(document.getElementById('app'), App());
 });
-route.get ("/Home",function (){
-  mount (document.getElementById ("app"),Home())
-})
-
+mount (document.getElementById("app"),Home())
 route.init();
