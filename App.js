@@ -1,8 +1,13 @@
 import { h } from './vnode.js';
-
 // component
 function App(){
-  return h("h1",null,"Hello World")
+  return h("h1",null,`hello world`)
 }
 
-export default App;
+function Home(){
+  return h('h1',null,"home")
+}
+
+export {
+  App,Home
+};

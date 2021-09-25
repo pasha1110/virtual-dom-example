@@ -1,5 +1,13 @@
 import { mount } from './vnode.js';
-import App from './App.js';
+import { App, Home } from './App.js';
+import Router from './vnode--router.js';
 
-// render
-mount(document.getElementById('app'), App());
+const route = new Router();
+route.get('/App', function () {
+  mount(document.getElementById('app'), App());
+});
+route.get ("/Home",function (){
+  mount (document.getElementById ("app"),Home())
+})
+
+route.init();
