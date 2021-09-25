@@ -2,7 +2,7 @@ import { h } from './vnode.js';
 
 // component
 function App(){
-  h("h1",null,"Hello Worl")
+  return h("h1",null,"Hello World")
 }
 
 export default App;
